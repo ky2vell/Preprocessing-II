@@ -1,21 +1,43 @@
 .home {
 
+  .hero-image {
+    background: url(../img/fun-bus.jpg) 50% 50% no-repeat;
+    background-size: cover;
+    height: 300px;
+  }
+
+  .top-content .content{
+    border-bottom: 2px dashed @navigation-border;
+    padding: 30px 0 20px;
+    margin-bottom: 30px;
+  }
+
   .content-section {
     margin: 30px 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
 
-   
+   @media @mobile {
+     flex-direction: column;
+   }
     
     .text-content {
       width: 48%;
       padding-right: 1%;
+
+      @media @mobile {
+        width: 100%;
+      }
     }
 
     .img-content {
       width: 48%;
       padding-left: 1%;
+
+      @media @mobile {
+        width: 100%;
+      }
 
       img {
         border-radius: 10px;
@@ -42,6 +64,10 @@
     width: 75%;
     margin: 0 auto 30px;
 
+    @media @mobile {
+      width: 100%;
+    }
+
     img {
       border-radius: 10px;
     }
@@ -53,9 +79,38 @@
     display: flex;
     justify-content: space-between;
 
+    @media @tablet {
+      flex-direction: column;
+      align-items: center;
+    }
+
     .destination {
       width: 30%;
       margin-bottom: 30px;
+
+      @media @tablet {
+        width: 80%;
+      }
+
+      .btn {
+        .homeButton(@eastern-blue, 12px 55px, 10px, white, 16px, 900);
+        cursor: pointer;
+
+        @media @tablet {
+          display: block;
+          text-align: center;
+        }
+
+        &:hover {
+          background: lighten(@eastern-blue, 5%)
+        }
+      }
     }
   }
 }// home
+
+@media @mobile {
+  .mobile-move {
+    order: 1;
+  }
+}

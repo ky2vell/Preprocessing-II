@@ -1,1 +1,45 @@
 // Navigation Styles here
+
+section.header-contain {
+    border-bottom: 2px dashed @navigation-border;
+
+    header.container {
+        display: flex;
+        align-items: center;
+
+        @media @tablet {
+            flex-direction: column;
+        }
+
+        .logo {
+            margin-right: auto;
+
+            @media @tablet {
+                margin: 15px auto 0;
+            }
+        }
+
+        nav {
+            display: flex;
+
+            @media @tablet {
+                justify-content: space-around;
+                width: 100%;
+            }
+
+            a {
+                color: @font-color;
+                font-size: 1.6rem;
+                margin: 32px 20px;
+                text-decoration: none;
+
+                @media @tablet {
+                    margin: 15px;
+                }
+            }
+        }
+    }
+}
+
+
+
